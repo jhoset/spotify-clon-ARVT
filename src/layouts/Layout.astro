@@ -14,12 +14,15 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta
+			name="description"
+			content="Clone of Spotify with Astro View Transitions integration for fluid navigation"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<ViewTransitions />
+		<title>{title} | Spotify Astro</title>
+		<ViewTransitions fallback="none" />
 	</head>
 	<body>
 		<div id="app" class="relative h-screen p-2 gap-2">
