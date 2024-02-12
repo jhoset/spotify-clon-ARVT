@@ -1,7 +1,10 @@
 ---
 import { allPlaylists, songs } from "../../lib/data";
 import Layout from "../../layouts/Layout.astro";
-import PlayListItemCard from "../../components/PlayListItemCard.astro";
+import { CardPlayButton } from "@/components/CardPlayButton";
+import MusicTable from "../../components/MusicTable.astro";
+import { LikeButton } from "../../components/LikeButton";
+import { DotsButton } from "../../components/DotsButton";
 
 const { id } = Astro.params;
 
@@ -32,29 +35,43 @@ const playListSongs = songs.filter(
                 <div>
                     <h1 class="text-5xl font-bold block text-white">
                         {playList?.title}
-                        <span transition:name=`playlist-${playList?.id}-title`></span>
+                        <span transition:name=`playlist-${playList?.id}-title`
+                        ></span>
                     </h1>
                 </div>
                 <div class="flex-1 flex items-end">
                     <div class="text-sm text-gray-300 font-normal">
                         <div transition:name=`playlist-${playList?.id}-artists`>
-                            <span> { playList?.artists.join(", ") } </span>
+                            <span> {playList?.artists.join(", ")}</span>
                         </div>
                         <p class="mt-1">
-                            <span class="text-white"> 50 songs </span>, 3h aprox
+                            <span class="text-white">
+                                {playListSongs.length} songs</span
+                            >, 3h aprox
                         </p>
                     </div>
                 </div>
             </div>
-        </header>
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 -z-10">
 
-        <div class="relative z-10 px-6 pt-10"></div>
+            </div>
+        </header>
+        <div class="pl-6 pt-6 flex gap-6">
+            <CardPlayButton id={id} size="large" client:load />
+            <LikeButton client:load id={id} />
+            <DotsButton client:load id={id} />
+        </div>
+
 
         <div
             class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 -z-10"
         >
         </div>
+        <div class="p-6">
+            <MusicTable songs={playListSongs} />
+        </div>
     </div>
 </Layout>
 
 <style></style>
+../../components/LikeButton.jsx../../components/DotsButton.jsx
