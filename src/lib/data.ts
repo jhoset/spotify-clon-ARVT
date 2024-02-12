@@ -13,11 +13,11 @@ export const playlists: Playlist[] = [
     {
         id: '1',
         albumId: 1,
-        title: "Chill Lo-Fi Music",
+        title: "Trance & Others",
         color: colors.yellow,
         cover:
-            "https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353",
-        artists: ["NoSpirit", "Casiio"],
+            "https://i.scdn.co/image/ab67706f000000029dab68973bc338db60e06d51",
+        artists: ["ASOT", "Armin Van Burren"],
     },
     {
         id: '2',
@@ -26,7 +26,7 @@ export const playlists: Playlist[] = [
         color: colors.green,
         cover:
             "https://vinyl.lofirecords.com/cdn/shop/files/2amsynth-vinyl.png?v=1693312187",
-        artists: ["Kupla", "Blue Fox"],
+        artists: ["Various Artists"],
     },
     {
         id: '3',
@@ -96,47 +96,47 @@ export const songs: Song[] = [
     {
         "id": 1,
         "albumId": 1,
-        "title": "Moonlit Walk",
-        "image": `https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353`,
-        "artists": ["LoFi Dreamer"],
-        "album": "Chill Lo-Fi Music",
-        "duration": "3:12"
+        "title": "Destination",
+        "image": `https://i.scdn.co/image/ab67616d0000b2735f026f7ce67ef161d31e9d0c`,
+        "artists": ["Armin Van Buuren", "Ferry Corsten", "Rank 1", "Ruben de Ronde"],
+        "album": "Trance & Others",
+        "duration": "3:24"
     },
     {
         "id": 2,
         "albumId": 1,
-        "title": "Coffee Daze",
-        "image": `https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353`,
-        "artists": ["LoFi Dreamer"],
-        "album": "Chill Lo-Fi Music",
-        "duration": "4:07"
+        "title": "Belong (Official Audio Radio Edit)",
+        "image": `https://geo-media.beatport.com/image_size/500x500/e6f4a4e5-272a-4c8c-81c6-934a7684f648.jpg`,
+        "artists": ["Axwell & Shapov"],
+        "album": "Trance & Others",
+        "duration": "3:24"
     },
     {
         "id": 3,
         "albumId": 1,
-        "title": "Skyline Serenade",
-        "image": `https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353`,
-        "artists": ["LoFi Dreamer"],
-        "album": "Chill Lo-Fi Music",
-        "duration": "3:50"
+        "title": "Zombie",
+        "image": `https://i1.sndcdn.com/artworks-pauX4Kn1DzkN-0-t500x500.png`,
+        "artists": ["Bassjackers Remix"],
+        "album": "Trance & Others",
+        "duration": "3:31"
     },
     {
         "id": 4,
         "albumId": 1,
-        "title": "Urban Echoes",
-        "image": `https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353`,
-        "artists": ["LoFi Dreamer"],
-        "album": "Chill Lo-Fi Music",
-        "duration": "3:30"
+        "title": "The Island - Pt. I (Dawn)",
+        "image": `https://i.scdn.co/image/ab67616d0000b27330f8e0f777376780c4077507`,
+        "artists": ["Pendulum"],
+        "album": "Trance & Others",
+        "duration": "3:48"
     },
     {
         "id": 5,
         "albumId": 1,
-        "title": "Night's End",
-        "image": `https://vinyl.lofirecords.com/cdn/shop/products/VINYL_MORNING_COFFEE_4-min.png?v=1680526353`,
-        "artists": ["LoFi Dreamer"],
-        "album": "Chill Lo-Fi Music",
-        "duration": "4:20"
+        "title": "Sleep When We're Dead",
+        "image": `https://i1.sndcdn.com/artworks-000390125688-smuc18-t500x500.jpg`,
+        "artists": ["Italo-Brothers"],
+        "album": "Trance & Others",
+        "duration": "3:06"
     },
     {
         "id": 1,

@@ -2,9 +2,10 @@
 import { allPlaylists, songs } from "../../lib/data";
 import Layout from "../../layouts/Layout.astro";
 import { CardPlayButton } from "@/components/CardPlayButton";
-import MusicTable from "../../components/MusicTable.astro";
+import { MusicTable } from "../../components/MusicTable";
 import { LikeButton } from "../../components/LikeButton";
 import { DotsButton } from "../../components/DotsButton";
+import PageHeader from "../../components/PageHeader.astro";
 
 const { id } = Astro.params;
 
@@ -12,6 +13,8 @@ const playList = allPlaylists.find((playlist) => playlist.id === id);
 const playListSongs = songs.filter(
     (song) => song.albumId === playList?.albumId,
 );
+
+const color = playList?.color.dark;
 ---
 
 <Layout title="Spotify Clone :D">
@@ -21,6 +24,7 @@ const playListSongs = songs.filter(
         transition:name=`playlist-${id}-box`
     >
         <!--  <PageHeader />  -->
+        <PageHeader />
         <header class="flex gap-8 px-6 mt-12">
             <picture class="aspect-square w-52 h-52 flex-none">
                 <img
@@ -33,10 +37,10 @@ const playListSongs = songs.filter(
             <div class="flex flex-col justify-between">
                 <h2 class="flex flex-1 items-end">Playlist</h2>
                 <div>
-                    <h1 class="text-5xl font-bold block text-white">
-                        {playList?.title}
-                        <span transition:name=`playlist-${playList?.id}-title`
-                        ></span>
+                    <h1 class=`text-5xl font-bold block text-white`>
+                        <span transition:name=`playlist-${playList?.id}-title`>
+                            {playList?.title}
+                        </span>
                     </h1>
                 </div>
                 <div class="flex-1 flex items-end">
@@ -52,8 +56,9 @@ const playListSongs = songs.filter(
                     </div>
                 </div>
             </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 -z-10">
-
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 -z-10"
+            >
             </div>
         </header>
         <div class="pl-6 pt-6 flex gap-6">
@@ -62,16 +67,19 @@ const playListSongs = songs.filter(
             <DotsButton client:load id={id} />
         </div>
 
-
         <div
-            class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-zinc-900/80 -z-10"
+            style=`background-color: rgba(0, 0, 0, 0.5); background-image: linear-gradient(to top, #000000, ${color});`
+            class="absolute inset-0 -z-10"
         >
+            <div
+                class="bg-gradient-to-t from-zinc-950 to-zinc-950/50 absolute inset-0 -z-10"
+            >
+            </div>
         </div>
         <div class="p-6">
-            <MusicTable songs={playListSongs} />
+            <MusicTable client:load songs={playListSongs} />
         </div>
     </div>
 </Layout>
 
 <style></style>
-../../components/LikeButton.jsx../../components/DotsButton.jsx
