@@ -3,7 +3,10 @@
 
 Clone of Spotify with [Astro View Transitions](https://docs.astro.build/en/guides/view-transitions/) is an **experimental feature** for fluid navigation, this example use tailwindcss, React, Astro & Svelte.
 
-#### Video Demo
+### Video Demo
+[![Watch the video](https://img.youtube.com/vi/H3QhFpFdxrM/0.jpg)](https://www.youtube.com/watch?v=H3QhFpFdxrM)
+
+
 
 
 ### About
